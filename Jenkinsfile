@@ -9,18 +9,12 @@ pipeline {
             }
         }
         stage('Test') { 
-            steps {
-                withMaven (maven: 'maven-3.6.3'){
+               withMaven (maven: 'maven-3.6.3'){
 			  bat 'mvn Test'  
                 // 
             }
         }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-          }
-        }
-      }
+      
+      } 
     }
- }
+  }
